@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ก้าว/ก่อน/เปลี่ยน : ตามรอยต่อสู้ประชาชน (เกาหลี)</title>
+    
+    <!-- เรียกใช้งาน Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- เรียกใช้งาน Google Fonts (Prompt สำหรับข้อความทั่วไป และ Sriracha สำหรับฟอนต์ลายมือสำรอง) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;600&family=Sriracha&display=swap" rel="stylesheet">
+
+    <style>
+        /* * [คำแนะนำสำหรับการนำไปลง GitHub]
+         * ให้นำไฟล์ฟอนต์ UID Nanno ของคุณขนุน (เช่น UID_Nanno.ttf) 
+         * มาวางไว้ในโฟลเดอร์เดียวกับไฟล์ index.html นี้ แล้วลบเครื่องหมายคอมเมนต์ด้านล่างออก
+         */
+        
+        @font-face {
+            font-family: 'UID Nanno';
+            src: url('./UID_Nanno.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        /* ตั้งค่าคลาสสำหรับฟอนต์ */
+        .font-title {
+            /* หากอัปโหลดฟอนต์เข้า GitHub แล้ว ระบบจะดึง UID Nanno มาใช้ก่อน ถ้าหาไม่เจอจะใช้ Sriracha แทน */
+            font-family: 'UID Nanno', 'Sriracha', cursive; 
+        }
+        .font-body {
+            font-family: 'Prompt', sans-serif;
+        }
+
+        /* เอฟเฟกต์สีน้ำเงินทับซ้อนทับภาพ (Overlay) ให้เหมือนต้นฉบับ */
+        .blue-overlay {
+            background-color: rgba(94, 128, 178, 0.75); /* สีน้ำเงินอมเทาโปร่งแสง */
+            mix-blend-mode: multiply;
+        }
+    </style>
+</head>
+<!-- 
+    [คำแนะนำการเปลี่ยนรูปภาพ] 
+    เปลี่ยน URL ใน style ด้านล่างนี้เป็นชื่อไฟล์รูปของคุณขนุน เช่น:
+    style="background-image: url('./may 18 gwangju.jpg');"
+-->
+<body class="font-body m-0 p-0 overflow-x-hidden bg-gray-900">
+
+    <div class="relative w-full min-h-screen bg-cover bg-center bg-no-repeat flex flex-col items-center justify-center" 
+         style="background-image: url('https://images.unsplash.com/photo-1548114628-984e1b5f6249?q=80&w=2000&auto=format&fit=crop');">
+        
+        <!-- แผ่นฟิล์มสีน้ำเงินทับภาพพื้นหลัง -->
+        <div class="absolute inset-0 blue-overlay"></div>
+        <div class="absolute inset-0 bg-blue-900/20"></div> <!-- เพิ่มความเข้มอีกนิดให้อ่านตัวหนังสือชัดขึ้น -->
+
+        <!-- ส่วนของเนื้อหา -->
+        <div class="relative z-10 flex flex-col items-center justify-center text-center px-4 md:px-8 w-full max-w-4xl mx-auto">
+            
+            <!-- คำทักทาย (WELCOME TO) -->
+            <p class="text-white text-xs md:text-sm tracking-[0.4em] uppercase font-semibold mb-6 md:mb-8 drop-shadow-md">
+                Welcome To
+            </p>
+
+            <!-- ชื่อโปรเจกต์ (ใช้ฟอนต์ลายมือ) -->
+            <h1 class="font-title text-white text-5xl md:text-7xl lg:text-8xl leading-[1.2] md:leading-[1.1] mb-12 md:mb-16 drop-shadow-lg" style="text-shadow: 2px 4px 6px rgba(0,0,0,0.3);">
+                ก้าว/ก่อน/เปลี่ยน<br>
+                :ตามรอยต่อสู้ประชาชน<br>
+                (เกาหลี)
+            </h1>
+
+            <!-- ปุ่มกดเพื่อไปหน้าต่อไป -->
+            <!-- ตอนนี้ลิงก์ไปที่ prepare.html ก่อน (หน้าถัดไปที่เราจะทำกัน) -->
+            <a href="prepare.html" class="bg-white text-[#5c4a3d] font-semibold text-sm md:text-base tracking-[0.2em] uppercase py-4 px-10 shadow-xl hover:bg-gray-100 hover:scale-105 hover:shadow-2xl transition-all duration-300 ease-in-out">
+                Learn More
+            </a>
+
+        </div>
+    </div>
+
+</body>
+</html>
